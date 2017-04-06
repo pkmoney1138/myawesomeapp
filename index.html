@@ -8,8 +8,18 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		
 		<style type="text/css">
-			#main-text {
+			#main-jumbo {
+				background-image: url(images/background-image.jpg);
 				text-align: center;
+			}
+			
+			#email-sign-up {
+				border-top: 1px gray solid;
+				padding-top: 20px;
+			}
+			
+			#email-sign-up button {
+				margin-left: 5px;
 			}
 		</style>
 	</head>
@@ -30,11 +40,24 @@
 		<!-- navbar-toggleable-md seems to put the <ul> content up next to <a> navbar-brand content. Wasn't putting them below until I added that.
 		mr-auto in the <ul> class seems to move the form content (buttons) to the right -->
 	</nav>	
-	<div class="jumbotron jumbotron-fluid">
-		<div class="container" id="main-text">
-			<h1 class="display-3">My Awesome App!</h1>
-			<p class="lead">This is why YOU should download this fantastic app!</p>
-		</div>	
+	<div class="jumbotron jumbotron-fluid" id="main-jumbo">
+		<div class="container">
+			<div id="main-text">
+				<h1 class="display-3">My Awesome App!</h1>
+				<p class="lead">This is why YOU should download this fantastic app!</p>
+			</div>
+			<div id="email-sign-up">
+				<p>Want to know more? Join our mailing list!</p>
+				<form class="form-inline">
+					<label class="sr-only" for="inlineFormInputGroup">Username</label>
+					<div class="container input-group">
+						<div class="input-group-addon">@</div>
+						<input type="text" class="form-control" id="inLineFormInputGroup" placeholder="Your email">
+						<button class="btn btn-primary">Sign Up</button>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 
 
