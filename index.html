@@ -19,13 +19,33 @@
 			}
 			
 			#email-sign-up button {
-				margin-left: 5px;
+				margin-left: 4px;
+			}
+			
+			.card-deck {
+				margin-top: 50px;
+			}
+			
+			h4 {
+				margin-top: 10px;
+			}
+			
+			#final-section {
+				margin-top: 50px;
+				height: 400px;
+				background-color: blue;
+				text-align: center;
+			}
+			
+			#final-section h3 {
+				display: inline-block;
+				margin-top: 200px;
 			}
 		</style>
 	</head>
 	<body>
 		
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
 		<a class="navbar-brand" href="#">MyApp</a>
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
@@ -53,13 +73,52 @@
 					<div class="container input-group">
 						<div class="input-group-addon">@</div>
 						<input type="text" class="form-control" id="inLineFormInputGroup" placeholder="Your email">
-						<button class="btn btn-primary">Sign Up</button>
+						<button class="btn btn-primary">Sign This Up</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-
+	<div id="card-section">
+		<div class="container">
+			<div id="secondary-text" class="text-center">
+				<h2>Why This App is Awesome</h2>
+				<p>Summary, once again, of your app's awesomeness</p>
+			</div>
+			<div class="card-deck">
+				<div class="card">
+					<div class="card-block">
+						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+						<h4>Card title</h4>
+						<p>This is a longer card with supporting text below as a natural lead to additional conent. This content is a little bit longer.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-block">
+						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+						<h4>Card title</h4>
+						<p>This card has suporting text below as a natural lead to additional content.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-block">
+						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+						<h4>Card title</h4>
+						<p>This is a wider card with supporting text below as a natural elad to additional content. This card has even longer content than the first to show that equal height action.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="container">
+				<div id="final-section">
+					<h3>Download the app.</h3>
+					<p>Really, why should I download this app?</p>
+					<img>
+				</div>
+			</div>
+		</footer>
 
 	
 		
