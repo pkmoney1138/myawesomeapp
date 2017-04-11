@@ -8,13 +8,18 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		
 		<style type="text/css">
-			#main-jumbo {
+			
+			body {
+				position: relative;
+			}
+			
+			#jumbo-1 {
 				background-image: url(images/background-image.jpg);
+				margin-top: 50px;
 				text-align: center;
 			}
 			
 			#email-sign-up {
-				border-top: 1px gray solid;
 				padding-top: 20px;
 			}
 			
@@ -30,27 +35,40 @@
 				margin-top: 10px;
 			}
 			
+			#jumbo-2 {
+				margin-top: 40px;
+				background-color: aqua;	
+			}
+			
 			#final-section {
 				margin-top: 50px;
 				height: 400px;
-				background-color: blue;
 				text-align: center;
 			}
 			
 			#final-section h3 {
 				display: inline-block;
-				margin-top: 200px;
+				margin-top: 20px;
 			}
+			
+			footer {
+				background-color: aqua;
+				padding-top: 150px;
+				margin-top: 50px;
+				text-align: center;
+				padding-bottom: 150px;
+			}
+			
 		</style>
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#navigation-bar" data-offset="150">
 		
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top" id="navigation-bar">
 		<a class="navbar-brand" href="#">MyApp</a>
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Download The App</a></li>
+			<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+			<li class="nav-item"><a class="nav-link" href="#download">Download The App</a></li>
 		</ul>
 		<form class="form-inline">
 			<input class="form-control mr-sm-2" type="email" placeholder="Email">
@@ -60,11 +78,15 @@
 		<!-- navbar-toggleable-md seems to put the <ul> content up next to <a> navbar-brand content. Wasn't putting them below until I added that.
 		mr-auto in the <ul> class seems to move the form content (buttons) to the right -->
 	</nav>	
-	<div class="jumbotron jumbotron-fluid" id="main-jumbo">
+	
+	<!-- Main Jumbotron Area -->
+	
+	<div class="jumbotron jumbotron-fluid" id="jumbo-1">
 		<div class="container">
 			<div id="main-text">
-				<h1 class="display-3">My Awesome App!</h1>
+				<h1 class="display-3" id="home">My Awesome App!</h1>
 				<p class="lead">This is why YOU should download this fantastic app!</p>
+				<hr class="m-y-2">
 			</div>
 			<div id="email-sign-up">
 				<p>Want to know more? Join our mailing list!</p>
@@ -79,52 +101,48 @@
 			</div>
 		</div>
 	</div>
-	<div id="card-section">
-		<div class="container">
-			<div id="secondary-text" class="text-center">
-				<h2>Why This App is Awesome</h2>
-				<p>Summary, once again, of your app's awesomeness</p>
+
+	
+	<!-- Card Area -->
+	<div class="container">
+		<div id="secondary-text" class="text-center">
+			<h1 id="about">Why This App is Awesome</h1>
+			<p>Summary, once again, of your app's awesomeness</p>
+		</div>
+		<div class="card-deck">
+			<div class="card">
+				<div class="card-block">
+					<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+					<h4>Card title</h4>
+					<p>This is a longer card with supporting text below as a natural lead to additional conent. This content is a little bit longer.</p>
+				</div>
 			</div>
-			<div class="card-deck">
-				<div class="card">
-					<div class="card-block">
-						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
-						<h4>Card title</h4>
-						<p>This is a longer card with supporting text below as a natural lead to additional conent. This content is a little bit longer.</p>
-					</div>
+			<div class="card">
+				<div class="card-block">
+					<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+					<h4>Card title</h4>
+					<p>This card has suporting text below as a natural lead to additional content.</p>
 				</div>
-				<div class="card">
-					<div class="card-block">
-						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
-						<h4>Card title</h4>
-						<p>This card has suporting text below as a natural lead to additional content.</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-block">
-						<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
-						<h4>Card title</h4>
-						<p>This is a wider card with supporting text below as a natural elad to additional content. This card has even longer content than the first to show that equal height action.</p>
-					</div>
+			</div>
+			<div class="card">
+				<div class="card-block">
+					<img class="card-img-top" src="images/card-image-4.jpg" alt="card image">
+					<h4>Card title</h4>
+					<p>This is a wider card with supporting text below as a natural elad to additional content. This card has even longer content than the first to show that equal height action.</p>
 				</div>
 			</div>
 		</div>
+	</div>
 		
-		<footer>
-			<div class="container">
-				<div id="final-section">
-					<h3>Download the app.</h3>
-					<p>Really, why should I download this app?</p>
-					<img>
-				</div>
-			</div>
-		</footer>
-
+	<!-- Footer Area -->
+	<footer>
+		<div>
+			<h2 id="download">Download the app!</h2>
+			<p class="lead">Really, why should I download this app?</p>
+			<p><a href=""><img src="images/appstore-copy.png"></a></p>
+		</div>
+	</footer>
 	
-		
-		
-		
-		
 		
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
