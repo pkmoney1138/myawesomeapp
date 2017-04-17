@@ -28,17 +28,25 @@
 				margin-left: 4px;
 			}
 			
+			#secondary-text {
+				text-align: center;
+			}
+			
 			.card-deck {
 				margin-top: 50px;
 			}
 			
-			h4 {
-				margin-top: 10px;
+			.card-deck span {
+				font-weight: bold;
+				font-size: x-large;
 			}
 			
-			#jumbo-2 {
-				margin-top: 40px;
-				background-color: aqua;	
+			.card-img-top {
+				width: 100%;
+			}
+			
+			h4 {
+				margin-top: 10px;
 			}
 			
 			#final-section {
@@ -60,10 +68,7 @@
 				padding-bottom: 150px;
 			}
 			
-			.card-deck span {
-				font-weight: bold;
-				font-size: x-large;
-			}
+			
 			
 		</style>
 	</head>
@@ -88,32 +93,29 @@
 	<!-- Main Jumbotron Area -->
 	
 	<div class="jumbotron jumbotron-fluid" id="jumbo-1">
-		<div class="container">
-			<div id="main-text">
-				<h1 class="display-3" id="home">My Awesome App!</h1>
-				<p class="lead">This is why YOU should download this fantastic app!</p>
-				<hr class="m-y-2">
-			</div>
-			<div id="email-sign-up">
-				<p>Want to know more? Join our mailing list!</p>
-				<form class="form-inline">
-					<label class="sr-only" for="inlineFormInputGroup">Username</label>
-					<div class="container input-group">
-						<div class="input-group-addon">@</div>
-						<input type="text" class="form-control" id="inLineFormInputGroup" placeholder="Your email">
-						<button class="btn btn-primary">Sign This Up</button>
-					</div>
-				</form>
-			</div>
+		<div id="main-text">
+			<h1 class="display-3" id="home">My Awesome App!</h1>
+			<p class="lead">This is why YOU should download this fantastic app!</p>
+			<hr class="m-y-2">
+		</div>
+		<div id="email-sign-up">
+			<p>Want to know more? Join our mailing list!</p>
+			<form class="form-inline">
+				<label class="sr-only" for="inlineFormInputGroup">Username</label>
+				<div class="container input-group">
+					<div class="input-group-addon">@</div>
+					<input type="text" class="form-control" id="inLineFormInputGroup" placeholder="Your email">
+					<button class="btn btn-primary">Sign This Up</button>
+				</div>
+			</form>
 		</div>
 	</div>
 
-	
 	<!-- Card Area -->
 	<div class="container">
-		<div id="secondary-text" class="text-center">
+		<div id="secondary-text">
 			<h1 id="about">Why This App is Awesome</h1>
-			<p>Summary, once again, of your app's awesomeness</p>
+			<p class="lead">Summary, once again, of your app's awesomeness</p>
 		</div>
 		<div class="card-deck">
 			<div class="card">
@@ -139,8 +141,10 @@
 			</div>
 		</div>
 	</div>
+	<!-- I cheated a bit with fitting the image in the card container above and just found a picture that fit inside the container after the initial ones I used were too big. If you want a different size image (larger or smaller) to fit, all you have to do is select "card-img-top" class in css and set the width to 100%. That should do it. -->
 		
 	<!-- Footer Area -->
+	
 	<footer>
 		<div>
 			<h2 id="download">Download the app!</h2>
@@ -148,7 +152,8 @@
 			<p><a href=""><img src="images/appstore-copy.png"></a></p>
 		</div>
 	</footer>
-	
+	<!-- I resized the appstore image in paint before linking to it. Turns out I could have kept the original size and just specified the width for it in css to achieve the same effect. -->
+
 		
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
